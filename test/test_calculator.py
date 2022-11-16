@@ -16,7 +16,7 @@ class RPNCalculatorTest(unittest.TestCase):
         result = self.calc.evaluate_expression("1")
         self.assertEqual(result, 1)
         result = self.calc.evaluate_expression("2")
-        self.assertEqual(result, 1)
+        self.assertEqual(result, 2)
         result = self.calc.evaluate_expression("+")
         self.assertEqual(result, 3.0)
 

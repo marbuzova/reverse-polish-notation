@@ -12,7 +12,11 @@ It supports the four basic arithmetic operations of +, -, *, /, and can be exten
 other operators. 
 
 Reverse Polish Notation is postfix notation which in terms of mathematical notion
-signifies operators following operands. 
+signifies operators following operands.
+
+Commands:
+* clear - to clear result
+* q - to exit
 
 Example input:
 ```bash
@@ -31,6 +35,12 @@ Usage:
     -13.0
     > 13 +
     0.0
+    
+    clear
+    0
+    
+    q
+    Exit
 ```
 
 ## Install

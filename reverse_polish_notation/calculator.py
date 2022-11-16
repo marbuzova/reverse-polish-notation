@@ -18,11 +18,14 @@ class RPNCalculator:
                 self.number_stack.append(self.perform_operation(token))
             elif self.is_number(token):
                 self.number_stack.append(int(token))
+                if len(tokens) == 1:
+                    return int(token)
             else:
                 raise ValueError(
                     "invalid input: %s input must consist of numbers and operators: + - * /"
                     % token
                 )
+
         return self.number_stack[0]
 
     # Check if token is a supported operator: + - * /
