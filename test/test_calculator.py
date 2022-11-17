@@ -12,6 +12,10 @@ class RPNCalculatorTest(unittest.TestCase):
     def test_evaluate_expression__expression(self):
         self.assertEqual(self.calc.evaluate_expression("5 5 5 8 + + -"), -13.0)
 
+    def test_evaluate_expression__multiple_expression(self):
+        self.assertEqual(self.calc.evaluate_expression("5 9 +"), 14.0)
+        self.assertEqual(self.calc.evaluate_expression("1 2 +"), 3.0)
+
     def test_evaluate_expression__single_value(self):
         result = self.calc.evaluate_expression("1")
         self.assertEqual(result, 1)
@@ -23,6 +27,12 @@ class RPNCalculatorTest(unittest.TestCase):
     def test_evaluate_expression__mixed(self):
         self.assertEqual(self.calc.evaluate_expression("5 5 5 8 + + -"), -13.0)
         self.assertEqual(self.calc.evaluate_expression("13 +"), 0.0)
+        self.assertEqual(self.calc.evaluate_expression("5 9 +"), 14.0)
+        self.assertEqual(self.calc.evaluate_expression("1 2 +"), 3.0)
+        result = self.calc.evaluate_expression("2")
+        self.assertEqual(result, 2)
+        result = self.calc.evaluate_expression("+")
+        self.assertEqual(result, 5.0)
 
     def test_evaluate_expression__unsupported_operation(self):
         with self.assertRaises(ValueError):

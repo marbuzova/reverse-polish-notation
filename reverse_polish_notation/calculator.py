@@ -26,7 +26,8 @@ class RPNCalculator:
                     % token
                 )
 
-        return self.number_stack[0]
+        # last item in stack will be the result
+        return self.number_stack[len(self.number_stack) - 1]
 
     # Check if token is a supported operator: + - * /
     def is_supported_operator(self, token):
