@@ -96,6 +96,7 @@ our auxilary space will be at most size of the input, n.
 
 ## Future improvements
 With larger scope of production-readying, extra additions would be:
+* RPN expression validation
 * tests for command-line functionality
 * logger
 * environment specific configurations
